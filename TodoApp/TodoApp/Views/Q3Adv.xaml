@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TodoApp.Views.Q3Adv">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="Instrucción"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   Padding="130,50,0,0"/>
+
+            <Label 
+Text="Las siguientes actividades son las que haría Ud. en un día normal. ¿ Su estado de Salud actual lo limita para realizar estas actividades? Si es así. Cuanto lo limita? Marque la opción que
+corresponda. "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Title"
+                TextColor="Gray"
+                Margin="30,0,20,80"/>
+     
+
+        <Button Text="Aceptar"
+             x:Name="bttnAceptar"
+             Clicked="bttnAceptar_Clicked"
+                    Margin="10,0,0,40"
+                    BackgroundColor="LightSeaGreen"
+                    BorderRadius="10"
+                      BorderWidth="2"
+                     HorizontalOptions="Center"
+                    HeightRequest="80"
+                    WidthRequest="120"
+                   
+             />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

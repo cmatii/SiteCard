@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TodoApp.MainPage">
+    
+    <NavigationPage.TitleView>
+        <Label 
+            Text="Registro de SF36" 
+            TextColor="White"
+            FontSize="Title"/>
+    </NavigationPage.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView 
+            x:Name="listView"
+            x:FieldModifier="public"
+            ItemsSource="{Binding NoteList}"
+           ItemTapped="OnItemTapped"
+            HasUnevenRows="true"
+            Grid.ColumnSpan="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label 
+                                Text="{Binding Text}"
+                                FontSize="Large"
+                                TextColor="Black"/>
+                            <Button
+                                x:Name="RemoveNote"
+                                Text="X"
+                                Clicked="RemoveNote_Clicked"
+                                Grid.Column="1"
+                                BackgroundColor="Red"
+                                TextColor="White"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+            x:Name="AddNote"
+            Grid.Row="1"
+            Margin="10"
+            BorderRadius="20"
+            Grid.Column="1"
+            BackgroundColor="DarkOrange"
+            Text="Add"
+            Clicked="AddNote_Clicked"
+            TextColor="White"/>
+    </Grid>
+
+</ContentPage>

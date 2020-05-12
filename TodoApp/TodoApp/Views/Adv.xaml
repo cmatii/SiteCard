@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TodoApp.Views.Adv">
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,80">
+            <Label Text="Cuestionario de Salud"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   Padding="65,30,0,0"/>
+
+            <Label 
+Text="El propósito de esta encuesta es saber su opinión acerca de su Salud. Esta información nos servirá para tener una idea de cómo se siente al desarrollar sus actividades cotidianas. Conteste cada
+ pregunta tal como se indica. Si no está seguro(a) de cómo contestar a una pregunta, escriba la
+mejor respuesta posible. No deje preguntas sin responder. "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Title"
+                TextColor="Gray"
+                Margin="30,10,20,0"/>
+            
+            <Button Text="Aceptar"
+             x:Name="bttnAceptar"
+             Clicked="bttnAceptar_Clicked"
+                    Margin="190,0,0,40"
+                    BackgroundColor="LightSeaGreen"
+                    BorderRadius="10"
+                      BorderWidth="2"
+                     HorizontalOptions="Center"
+                    HeightRequest="80"
+                    WidthRequest="120"
+                   
+             />
+
+
+            <Button Text="Rechazar"
+             x:Name="bttnRechazar"
+             Clicked="bttnRechazar_Clicked"
+                    Margin="0,-125,180,50"
+                    BackgroundColor="IndianRed"
+                    BorderRadius="10"
+                      BorderWidth="2"
+                     HorizontalOptions="Center"
+                    HeightRequest="80"
+                    WidthRequest="120"
+                   
+             />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
